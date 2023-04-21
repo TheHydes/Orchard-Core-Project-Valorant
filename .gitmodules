@@ -1,7 +1,3 @@
-[submodule "Orchard-Base-Theme"]
-	path = Orchard-Base-Theme
-	url = https://github.com/Lombiq/Orchard-Base-Theme
-	branch = dev
 [submodule "src/Themes/Orchard-Base-Theme"]
 	path = src/Themes/Orchard-Base-Theme
 	url = https://github.com/Lombiq/Orchard-Base-Theme
