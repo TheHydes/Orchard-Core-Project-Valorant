@@ -1,0 +1,4 @@
+[submodule "Orchard-Base-Theme"]
+	path = Orchard-Base-Theme
+	url = https://github.com/Lombiq/Orchard-Base-Theme
+	branch = dev
