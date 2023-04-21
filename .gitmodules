@@ -4,17 +4,17 @@
 	branch = dev
 [submodule "src/Libraries/Lombiq.HelpfulLibraries"]
 	path = src/Libraries/Lombiq.HelpfulLibraries
-	url = https://github.com/Lombiq/Helpful-Libraries.git
+	url = https://github.com/Lombiq/Helpful-Libraries
 	branch = dev
 [submodule "src/Modules/Lombiq.HelpfulExtensions"]
 	path = src/Modules/Lombiq.HelpfulExtensions
-	url = https://github.com/Lombiq/Helpful-Extensions.git
+	url = https://github.com/Lombiq/Helpful-Extensions
 	branch = dev
 [submodule "src/Utilities/Lombiq.NodeJs.Extensions"]
 	path = src/Utilities/Lombiq.NodeJs.Extensions
-	url = https://github.com/Lombiq/NodeJs-Extensions.git
+	url = https://github.com/Lombiq/NodeJs-Extensions
 	branch = dev
 [submodule "src/Utilities/Lombiq.Npm.Targets"]
 	path = src/Utilities/Lombiq.Npm.Targets
-	url = https://github.com/Lombiq/NPM-Targets.git
+	url = https://github.com/Lombiq/NPM-Targets
 	branch = dev
