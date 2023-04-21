@@ -1,0 +1,30 @@
+@using ValorantStuff.Models;
+@using Microsoft.AspNetCore.Html;
+@using OrchardCore.Markdown.Services;
+
+@inject IMarkdownService MarkdownService;
+
+@{
+    HeroPart heroPart = Model.Part;
+
+    var heroTitle = heroPart.Title?.Text;
+    var heroBody = HtmlString.Empty;
+    var heroBackgroundColor = heroPart.ColorList.Text?.ToLowerInvariant();
+
+    if (string.IsNullOrWhiteSpace(heroTitle))
+    {
+        return;
+    }
+
+    if (heroPart.Body.Markdown != null)
+    {
+        heroBody = new HtmlString(MarkdownService.ToHtml(heroPart.Body.Markdown));
+    }
+}
+
+<div class="heroPart__container @heroBackgroundColor">
+    <div class="heroPart">
+         <h1 class="heroPart__title">@heroTitle</h1>
+         <div class="heroPart__body">@heroBody</div>
+    </div>
+</div>

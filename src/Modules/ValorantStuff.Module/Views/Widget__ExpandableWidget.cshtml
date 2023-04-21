@@ -1,0 +1,28 @@
+@using ValorantStuff.Models;
+@using Microsoft.AspNetCore.Html;
+@using OrchardCore.ContentFields.Settings;
+@using OrchardCore.ContentManagement;
+@*@using OrchardCore.Flows.Models;*@
+
+@{
+    var contentItem = (ContentItem)Model.ContentItem;
+    var widget = contentItem.As<ExpandableWidget>();
+    var widgetTitle = widget.Title.Text;
+
+    var widgetText = HtmlString.Empty;
+
+    if (widget.Text.Html != null)
+    {
+        widgetText = new HtmlString(widget.Text.Html);
+    }
+
+    var widgetBackground = widget.Color.Text;
+}
+
+<div class="ExpandableWidget">
+    <button type="button" class="ExpandableWidget__title @widgetBackground">
+        <span class="ExpandableWidget__titleText">@widgetTitle</span>
+        <i class="ExpandableWidget__arrow"></i>
+    </button>
+    <div class="ExpandableWidget__text">@widgetText</div>
+</div>

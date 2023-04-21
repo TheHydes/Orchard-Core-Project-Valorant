@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Lombiq.BaseTheme" Version="3.0.1" />
+    <PackageReference Include="Lombiq.HelpfulExtensions" Version="5.0.1" />
+    <PackageReference Include="Lombiq.HelpfulLibraries" Version="5.1.2" />
+    <PackageReference Include="OrchardCore" Version="1.6.0" />
+    <PackageReference Include="OrchardCore.ContentManagement.Display" Version="1.6.0" />
+    <PackageReference Include="OrchardCore.DisplayManagement.Abstractions" Version="1.6.0" />
+    <PackageReference Include="OrchardCore.Localization" Version="1.6.0" />
+    <PackageReference Include="OrchardCore.Settings" Version="1.6.0" />
+    <PackageReference Include="OrchardCore.Theme.Targets" Version="1.6.0" />
+    <PackageReference Include="OrchardCore.ContentManagement" Version="1.6.0" />
+    <PackageReference Include="OrchardCore.DisplayManagement" Version="1.6.0" />
+    <PackageReference Include="OrchardCore.ResourceManagement" Version="1.6.0" />
+  </ItemGroup>
+
+</Project>

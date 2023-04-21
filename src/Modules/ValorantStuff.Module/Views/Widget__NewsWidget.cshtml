@@ -1,0 +1,26 @@
+﻿@using ValorantStuff.Models;
+@using Microsoft.AspNetCore.Html;
+@using OrchardCore.ContentFields.Settings;
+@using OrchardCore.ContentManagement;
+@*@using OrchardCore.Flows.Models;*@
+
+@{
+    var contentItem = (ContentItem)Model.ContentItem;
+    var widget = contentItem.As<NewsWidget>();
+    var widgetImage = widget.Image;
+    var widgetTitle = widget.Title.Text;
+
+    var widgetText = HtmlString.Empty;
+
+    if (widget.Text.Html != null)
+    {
+        widgetText = new HtmlString(widget.Text.Html);
+    }
+
+}
+
+<div class="NewsWidget">
+    <img class="NewsWidhet__image" @widgetImage/>
+    <h1 class="NewsWidget__title">@widgetTitle</h1>
+    <div class="NewsWidget__text">@widgetText</div>
+</div>

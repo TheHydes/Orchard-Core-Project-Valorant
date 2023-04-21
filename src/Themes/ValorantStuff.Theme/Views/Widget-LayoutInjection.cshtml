@@ -1,0 +1,29 @@
+@using Lombiq.BaseTheme.Constants
+@using Lombiq.BaseTheme.Services
+@using OrchardCore.DisplayManagement.Html
+@using OrchardCore.DisplayManagement
+@using OrchardCore.Settings
+
+@inject ICssClassHolder CssClassHolder
+
+@{
+    var navigationZones = CssClassHolder.GetZoneClasses(ZoneNames.Navigation);
+    navigationZones.Remove("navbar-expand-md");
+    navigationZones.Add("valorantStuffMainMenu");
+    navigationZones.Add("navbar-expand-lg");
+
+    Title.AddSegment(new HtmlContentString(Site.SiteName), "before");
+}
+
+<zone name="@ZoneNames.Navigation">
+    <div class="container valorantStuffMainMenu__container">
+        <div>
+            <a href="@Url.Content("~")">
+                <img src="@Url.Content("~/ValorantStuff.Theme/images/valorant-stuff-logo.png")" alt="@T["ValorantStuff Logo"]" class="valorantStuffMainMenu__container__logo">
+            </a>
+        </div>
+        <button type="button" class="navbar-toggler valorantStuffMainMenu__togglerButton" data-bs-toggle="collapse" data-bs-target="#mainMenu, #togglerIcon" aria-expanded="false" aria-controls="navbar" aria-label="@T["Toggle navigation"]">
+            <span id="togglerIcon" class="navbar-toggler-icon valorantStuffMainMenu__togglerButton__togglerIcon"></span>
+        </button>
+    </div>
+</zone>

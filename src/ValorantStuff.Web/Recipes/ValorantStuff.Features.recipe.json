@@ -1,0 +1,87 @@
+{
+  "name": "ValorantStuff.Features",
+  "displayName": "ValorantStuff - Features",
+  "description": "Features and minimal configuration.",
+  "version": "1.0",
+  "categories": [ "valorantstuff" ],
+  "tags": [],
+
+  "steps": [
+    {
+      "name": "feature",
+      "enable": [
+        // From the blog.recipe.json, excluding TheBlogTheme.
+        // SaaS
+        "OrchardCore.HomeRoute",
+        "OrchardCore.Admin",
+        "OrchardCore.Diagnostics",
+        "OrchardCore.DynamicCache",
+        "OrchardCore.Features",
+        "OrchardCore.Navigation",
+        "OrchardCore.Recipes",
+        "OrchardCore.Resources",
+        "OrchardCore.Roles",
+        "OrchardCore.Security",
+        "OrchardCore.Settings",
+        "OrchardCore.Themes",
+        "OrchardCore.Users",
+
+        // Content Management
+        "OrchardCore.Alias",
+        "OrchardCore.AdminMenu",
+        "OrchardCore.Autoroute",
+        "OrchardCore.Html",
+        "OrchardCore.ContentFields",
+        "OrchardCore.ContentPreview",
+        "OrchardCore.Contents",
+        "OrchardCore.ContentTypes",
+        "OrchardCore.CustomSettings",
+        "OrchardCore.Deployment",
+        "OrchardCore.Deployment.Remote",
+        "OrchardCore.Feeds",
+        "OrchardCore.Flows",
+        "OrchardCore.Indexing",
+        "OrchardCore.Layers",
+        "OrchardCore.Lists",
+        "OrchardCore.Markdown",
+        "OrchardCore.Media",
+        "OrchardCore.Menu",
+        "OrchardCore.Placements",
+        "OrchardCore.Queries",
+        "OrchardCore.Queries.Sql",
+        "OrchardCore.Shortcodes.Templates",
+        "OrchardCore.Rules",
+        "OrchardCore.Taxonomies",
+        "OrchardCore.Title",
+        "OrchardCore.Templates",
+        "OrchardCore.Tenants",
+        "OrchardCore.Widgets",
+        "OrchardCore.Workflows",
+        "OrchardCore.Workflows.Http",
+
+        // Themes
+        "TheAdmin",
+        "SafeMode",
+        "TheTheme",
+        "ValorantStuff.Theme",
+
+        // Our own stuff.
+        "Lombiq.HelpfulExtensions.ContentTypes",
+        "Lombiq.HelpfulExtensions.Flows",
+        "Lombiq.HelpfulExtensions.ShapeTracing",
+        "Lombiq.HelpfulExtensions.Widgets",
+        "Lombiq.HelpfulExtensions.SiteTexts",
+        "ValorantStuff"
+      ]
+    },
+    {
+      "name": "settings",
+      "LocalizationSettings": {
+        "DefaultCulture": "en-US",
+        "SupportedCultures": [
+          "en-US"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+@import "../components/mixins/button";
+@import "../abstracts/native-variables";
+@import "../abstracts/mixins";
+
+.valorantStuffMainMenu {
+    position: relative;
+    gap: 10px;
+    background-color: var(--color-background-body);
+    height: auto;
+    box-shadow: 0 8px 32px rgba(0 0 0 / 0.1);
+
+    &.layoutElement {
+        padding: 24px 0;
+
+        @media(min-width: 992px) {
+            padding: 24px 32px;
+        }
+    }
+    // This container is rendered by default, it's empty but not used, so we can hide it.
+    & > .container-fluid {
+        display: none;
+    }
+
+    @media(min-width: 992px) {
+        height: 72px;
+    }
+
+    @media(min-width: 1400px) {
+        height: 76px;
+    }
+
+    &__container {
+        display: flex;
+        align-items: flex-start;
+
+        @media(min-width: 992px) {
+            max-width: 100%;
+            padding-right: 0;
+            padding-left: 0;
+        }
+        // We don't want to change the original behaviour above lg, so it's simpler to use "media-breakpoint-down".
+        @media(min-width: 992px) {
+            max-width: unset;
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        &__logo {
+            padding-left: 32px;
+
+            @media(min-width: 992px) {
+                padding-left: 0;
+            }
+
+            @media (min-width: 1400px) {
+                content: url("../images/valorant-stuff-logo.png");
+            }
+        }
+
+        .navbar-collapse {
+            flex-grow: 0;
+        }
+    }
+
+    &__togglerButton {
+        display: flex;
+        flex: none;
+        flex-grow: 0;
+        border: none;
+        padding-right: 32px;
+
+        &__togglerIcon {
+            background-image: url("../images/main-menu-open-icon.svg");
+            width: 30px;
+            height: 20px;
+        }
+
+        .collapse {
+            &.show {
+                background-image: url("../images/main-menu-close-icon.svg");
+                width: 20px;
+                height: 20px;
+            }
+
+            &:not(.show) {
+                display: inline-block;
+            }
+        }
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+    &__mainMenu {
+        padding-top: 32px;
+
+        li {
+            padding: 16px 32px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            height: 56px;
+
+            @media(min-width: 992px) {
+                padding: 0 10px;
+            }
+
+            @media (min-width: 1200px) {
+                padding: 0 20px;
+            }
+
+            a {
+                font-family: var(--font-museo);
+                font-weight: 400;
+                font-size: 20px;
+                color: var(--color-lombiq-black);
+                text-decoration: none;
+
+                &:hover {
+                    color: var(--color-black);
+                }
+
+                @media(min-width: 992px) {
+                    font-size: 16px;
+                }
+            }
+        }
+        // In this situation we can't fix the warning, since if we switch up the two selectors it will still throw the
+        // warning.
+        /* stylelint-disable no-descending-specificity */
+        & > .currentPage {
+            background-color: var(--color-lombiq-green);
+
+            @media(min-width: 992px) {
+                background-color: transparent;
+            }
+
+            a {
+                font-weight: 600;
+                color: var(--color-active-menu-link);
+
+                &:hover {
+                    color: var(--color-black);
+                }
+
+                @media(min-width: 992px) {
+                    color: var(--color-lombiq-black);
+                    text-decoration: underline;
+                    text-underline-position: under;
+                }
+            }
+        }
+    }
+}

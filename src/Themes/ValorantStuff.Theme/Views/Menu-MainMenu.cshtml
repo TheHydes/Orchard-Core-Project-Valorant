@@ -1,0 +1,15 @@
+@using ValorantStuff.Theme.Constants
+@using OrchardCore.DisplayManagement
+@{
+    var tag = Tag(Model, "ul");
+    tag.AddCssClass("nav navbar-nav valorantStuffMainMenu__mainMenu");
+
+    foreach (var item in Model.Items)
+    {
+        tag.InnerHtml.AppendHtml(await DisplayAsync(item));
+    }
+}
+
+<script at="Foot" asp-name="@ResourceNames.MainMenu"></script>
+
+@tag

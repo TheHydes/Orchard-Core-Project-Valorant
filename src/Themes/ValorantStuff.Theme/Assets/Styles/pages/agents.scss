@@ -1,0 +1,114 @@
+@import "../components/mixins/button";
+@import "../abstracts/native-variables";
+@import "../abstracts/mixins";
+
+.Black {
+    background-color: black;
+    border-color: darkred;
+}
+
+.Gray {
+    background-color: gray;
+    border-color: darkred;
+}
+
+.White {
+    background-color: white;
+    border-color: darkred ;
+}
+
+.ExpandableWidget {
+    /*&__container {*/
+        /*        @include margin-left-gutter($multiplier: -1);
+        @include margin-right-gutter($multiplier: -1);*/
+
+        /*@media (min-width: 1200px) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }*/
+
+    &__title {
+        color: darkred;
+        padding: 2rem;
+        display: flex;
+        justify-content: space-between;
+        border-style: solid;
+        width: 100%;
+        transition: opacity 0.2s ease;
+    }
+
+    &__titleText {
+        width: 80%;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: left;
+        font-family: fantasy;
+    }
+/*
+    &__textAndFoot {
+        background: var(--color-white);
+        display: block;
+        max-height: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: padding 0.3s ease-in, max-height 0.3s ease, visibility 0.2s ease-in, opacity 0.1s ease-in;
+
+        @media (min-width: 1200px) {
+            display: flex;
+        }
+    }*/
+
+    &__text {
+        background: var(--color-white);
+        display: block;
+        max-height: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: padding 0.3s ease-in, max-height 0.3s ease, visibility 0.2s ease-in, opacity 0.1s ease-in;
+        padding-bottom: 4rem;
+
+        @media (min-width: 1200px) {
+            display: flex;
+        }
+        /*        @media (min-width: 1200px) {
+            width: 50%;
+            padding-bottom: unset;
+        }*/
+    }
+
+/*    &__foot {
+        @media (min-width: 1200px) {
+            padding-left: 15%;
+        }
+    }*/
+
+    &__arrow {
+        background-image: url("/ValorantStuff.Theme/images/valorant-stuff-arrow-down-icon.svg");
+        color: darkred;
+        width: 16px;
+        height: 18px;
+        transition: transform 0.2s ease;
+    }
+
+    .open &__title {
+        opacity: 0.8;
+    }
+
+    .open &__arrow {
+        transform: rotate(180deg);
+    }
+
+    .open &__text {
+        display: block;
+        max-height: 1200px;
+        padding: 2rem 2rem 4rem;
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.3s ease, max-height 0.3s ease, padding 0.01s ease;
+
+        @media (min-width: 1200px) {
+            display: flex;
+        }
+    }
+}
