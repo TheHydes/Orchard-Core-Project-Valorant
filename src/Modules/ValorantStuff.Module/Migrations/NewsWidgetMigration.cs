@@ -29,7 +29,8 @@ public class NewsWidgetMigration : DataMigration
                 .OfType(nameof(HtmlField))
                 .WithDisplayName("Text")
                 .WithPosition("2")
-                .WithEditor("Trumbowyg"))
+                .WithEditor("Trumbowyg")
+                .WithSetting("HtmlFieldSettings.SanitizeHtml", "false"))
         );
 
         _contentDefinitionManager.AlterTypeDefinition(NewsWidget, type => type

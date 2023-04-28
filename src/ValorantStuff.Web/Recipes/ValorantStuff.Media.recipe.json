@@ -1,0 +1,133 @@
+{
+  "name": "ValorantStuff.Media",
+  "displayName": "ValorantStuff media",
+  "description": "Media recipe for https://valorantstuff.com/.",
+  "version": "1.0",
+  "issetuprecipe": false,
+  "categories": [ "valorantstuff", "media" ],
+  "tags": [],
+
+  "steps": [
+    {
+      "name": "media",
+      "Files": [
+        {
+          "SourcePath": "mediafields/gekkoDivider.jpg",
+          "TargetPath": "mediafields/gekkoDivider.jpg"
+        },
+        {
+          "SourcePath": "mediafields/logo.png",
+          "TargetPath": "mediafields/logo.png"
+        },
+        {
+          "SourcePath": "mediafields/logoMaybe.png",
+          "TargetPath": "mediafields/logoMaybe.png"
+        },
+        {
+          "SourcePath": "mediafields/news.jpg",
+          "TargetPath": "mediafields/news.jpg"
+        },
+        {
+          "SourcePath": "mediafields/omen.jpg",
+          "TargetPath": "mediafields/omen.jpg"
+        },
+        {
+          "SourcePath": "mediafields/Omen_C.mp4",
+          "TargetPath": "mediafields/Omen_C.mp4"
+        },
+        {
+          "SourcePath": "mediafields/Omen_E.mp4",
+          "TargetPath": "mediafields/Omen_E.mp4"
+        },
+        {
+          "SourcePath": "mediafields/Omen_Q.mp4",
+          "TargetPath": "mediafields/Omen_Q.mp4"
+        },
+        {
+          "SourcePath": "mediafields/Omen_X.mp4",
+          "TargetPath": "mediafields/Omen_X.mp4"
+        },
+        {
+          "SourcePath": "mediafields/omenA.png",
+          "TargetPath": "mediafields/omenA.png"
+        },
+        {
+          "SourcePath": "mediafields/phoenix.jpeg",
+          "TargetPath": "mediafields/phoenix.jpeg"
+        },
+        {
+          "SourcePath": "mediafields/Phoenix_C.mp4",
+          "TargetPath": "mediafields/Phoenix_C.mp4"
+        },
+        {
+          "SourcePath": "mediafields/Phoenix_E.mp4",
+          "TargetPath": "mediafields/Phoenix_E.mp4"
+        },
+        {
+          "SourcePath": "mediafields/Phoenix_Q.mp4",
+          "TargetPath": "mediafields/Phoenix_Q.mp4"
+        },
+        {
+          "SourcePath": "mediafields/Phoenix_X.mp4",
+          "TargetPath": "mediafields/Phoenix_X.mp4"
+        },
+        {
+          "SourcePath": "mediafields/phoenix2.jpg",
+          "TargetPath": "mediafields/phoenix2.jpg"
+        },
+        {
+          "SourcePath": "mediafields/phoenixA.png",
+          "TargetPath": "mediafields/phoenixA.png"
+        },
+        {
+          "SourcePath": "mediafields/reyna.jpg",
+          "TargetPath": "mediafields/reyna.jpg"
+        },
+        {
+          "SourcePath": "mediafields/Reyna_C.mp4",
+          "TargetPath": "mediafields/Reyna_C.mp4"
+        },
+        {
+          "SourcePath": "mediafields/Reyna_E.mp4",
+          "TargetPath": "mediafields/Reyna_E.mp4"
+        },
+        {
+          "SourcePath": "mediafields/Reyna_Q.mp4",
+          "TargetPath": "mediafields/Reyna_Q.mp4"
+        },
+        {
+          "SourcePath": "mediafields/Reyna_X.mp4",
+          "TargetPath": "mediafields/Reyna_X.mp4"
+        },
+        {
+          "SourcePath": "mediafields/reynaA.png",
+          "TargetPath": "mediafields/reynaA.png"
+        },
+        {
+          "SourcePath": "mediafields/sage.jpg",
+          "TargetPath": "mediafields/sage.jpg"
+        },
+        {
+          "SourcePath": "mediafields/Sage_C.mp4",
+          "TargetPath": "mediafields/Sage_C.mp4"
+        },
+        {
+          "SourcePath": "mediafields/Sage_E.mp4",
+          "TargetPath": "mediafields/Sage_E.mp4"
+        },
+        {
+          "SourcePath": "mediafields/Sage_Q.mp4",
+          "TargetPath": "mediafields/Sage_Q.mp4"
+        },
+        {
+          "SourcePath": "mediafields/Sage_X.mp4",
+          "TargetPath": "mediafields/Sage_X.mp4"
+        },
+        {
+          "SourcePath": "mediafields/sageA.png",
+          "TargetPath": "mediafields/sageA.png"
+        }
+      ]
+    }
+  ]
+}

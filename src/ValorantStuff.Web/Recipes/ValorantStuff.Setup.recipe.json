@@ -1,0 +1,766 @@
+{
+  "name": "ValorantStuff.Setup",
+  "displayName": "ValorantStuff - Home",
+  "description": "Setup recipe for the main tenant.",
+  "version": "1.0",
+  "issetuprecipe": true,
+  "categories": [ "valorantstuff" ],
+  "tags": [],
+  "steps": [
+    {
+      "name": "recipes",
+      "Values": [
+        {
+          "executionid": "ValorantStuff.Web",
+          "name": "ValorantStuff.Features"
+        },
+        {
+          "executionid": "ValorantStuff.Web",
+          "name": "ValorantStuff.Media"
+        }
+      ]
+    },
+    {
+      "name": "settings",
+      "SmtpSettings": {
+        "DefaultSender": "info@asd.com"
+      },
+      "LayerSettings": {
+        "Zones": [
+          "LayoutInjection",
+          "Header",
+          "Navigation",
+          "BeforeMain",
+          "Featured",
+          "AsideFirst",
+          "Messages",
+          "BeforeContent",
+          "Content",
+          "AfterContent",
+          "AsideSecond",
+          "AfterMain",
+          "Footer",
+          "FooterInside"
+        ]
+      }
+    },
+    {
+      "name": "themes",
+      "admin": "TheAdmin",
+      "site": "ValorantStuff.Theme"
+    },
+    {
+      "name": "content",
+      "data": [
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentItemVersionId": "[js: uuid()]",
+          "ContentType": "Page",
+          "DisplayText": "Welcome to the homepage of ValorantStuff",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2023-04-26T12:24:49.1601292Z",
+          "PublishedUtc": "2023-04-26T12:24:49.1669002Z",
+          "CreatedUtc": "2023-04-15T12:43:12.122884Z",
+          "Owner": "",
+          "Author": "admin",
+          "TitlePart": {
+            "Title": "This is ValorantStuff Home"
+          },
+          "AutoroutePart": {
+            "Path": "valorantstuff-home",
+            "SetHomepage": true,
+            "Disabled": false,
+            "RouteContainedItems": false,
+            "Absolute": false
+          },
+          "FlowPart": {
+            "Widgets": [
+              {
+                "ContentItemId": "[js: uuid()]",
+                "ContentItemVersionId": "[js: uuid()]",
+                "ContentType": "HtmlWidget",
+                "DisplayText": "",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-04-26T12:24:49.1628705Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": "",
+                "Author": "admin",
+                "HtmlBodyPart": {
+                  "Html": "<iframe class=\"mainPageYt\" src=\"https://www.youtube.com/embed/XfuMEmcz3k0\">\r\n</iframe><p class=\"mainPageDesc\">Valorant is a team-based first-person tactical hero shooter set in the near future. Players play as one of a set of Agents, characters based on several countries and cultures around the world. In the main game mode, players are assigned to either the attacking or defending team with each team having five players on it. Agents have unique abilities, each requiring charges, as well as a unique ultimate ability that requires charging through kills, deaths, orbs, or objectives.<br></p>"
+                },
+                "AdditionalStylingPart": {
+                  "CustomClasses": null,
+                  "RemoveGridExtensionClasses": false
+                },
+                "@WeldedPartSettings": {
+                  "AdditionalStylingPart": {}
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                }
+              }
+            ]
+          },
+          "HeroPart": {
+            "Title": {
+              "Text": "Welcome to the homepage of ValorantStuff"
+            },
+            "ColorList": {
+              "Text": "Black"
+            },
+            "Body": {
+              "Markdown": "This page serves the purpose of informing players about updates, showcase agents and give a few helpful tricks for the new players.\r\n\r\nEnjoy your stay!"
+            }
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentItemVersionId": "[js: uuid()]",
+          "ContentType": "Menu",
+          "DisplayText": "Main Menu",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2023-04-20T15:00:33.8560101Z",
+          "PublishedUtc": "2023-04-20T15:00:33.8924526Z",
+          "CreatedUtc": "2023-04-20T14:32:57.8340247Z",
+          "Owner": "[js: uuid()]",
+          "Author": "admin",
+          "TitlePart": {
+            "Title": "Main Menu"
+          },
+          "AliasPart": {
+            "Alias": "main-menu"
+          },
+          "MenuPart": {},
+          "MenuItemsListPart": {
+            "MenuItems": [
+              {
+                "ContentItemId": "[js: uuid()]",
+                "ContentItemVersionId": "[js: uuid()]",
+                "ContentType": "LinkMenuItem",
+                "DisplayText": "News",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-04-20T14:33:52.6981034Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "LinkMenuItemPart": {
+                  "Name": "News",
+                  "Url": "~/news"
+                },
+                "LinkMenuItem": {}
+              },
+              {
+                "ContentItemId": "[js: uuid()]",
+                "ContentItemVersionId": "[js: uuid()]",
+                "ContentType": "LinkMenuItem",
+                "DisplayText": "Agents",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-04-20T14:34:04.1567322Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "LinkMenuItemPart": {
+                  "Name": "Agents",
+                  "Url": "~/agents"
+                },
+                "LinkMenuItem": {}
+              }
+            ]
+          },
+          "@WeldedPartSettings": {
+            "MenuPart": {
+              "Position": "3"
+            },
+            "MenuItemsListPart": {
+              "Position": "4"
+            }
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentItemVersionId": "[js: uuid()]",
+          "ContentType": "Page",
+          "DisplayText": "Valorant news",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2023-04-26T14:18:47.2925565Z",
+          "PublishedUtc": "2023-04-26T14:18:47.3941861Z",
+          "CreatedUtc": "2023-04-26T14:12:49.9705899Z",
+          "Owner": "4n99h06xq2xhcsa2n5k2e2y04e",
+          "Author": "admin",
+          "AutoroutePart": {
+            "Path": "news",
+            "SetHomepage": false,
+            "Disabled": false,
+            "RouteContainedItems": false,
+            "Absolute": false
+          },
+          "FlowPart": {
+            "Widgets": [
+              {
+                "ContentItemId": "[js: uuid()]",
+                "ContentItemVersionId": "[js: uuid()]",
+                "ContentType": "NewsWidget",
+                "DisplayText": null,
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-04-26T14:18:47.2953778Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "NewsWidget": {
+                  "Image": {
+                    "Paths": [
+                      "mediafields/gekkoDivider.jpg"
+                    ],
+                    "MediaTexts": [
+                      ""
+                    ]
+                  },
+                  "Title": {
+                    "Text": "New agent enters the field: Gekko"
+                  },
+                  "Text": {
+                    "Html": "<p>Say hello to Gekko, the newest Initiator Agent. He and his crew of four are ready to clear corners, scout areas, and even plant and defuse the Spike for you. But that’s not all. You’ve voiced your demands, waited, and now it’s finally here: Oni has returned along with a new melee. </p>\r\n<iframe class=\"yt\" src=\"https://www.youtube.com/embed/iYFh_XAXSPk\"><br>"
+                  }
+                },
+                "AdditionalStylingPart": {
+                  "CustomClasses": null,
+                  "RemoveGridExtensionClasses": false
+                },
+                "@WeldedPartSettings": {
+                  "AdditionalStylingPart": {}
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                }
+              }
+            ]
+          },
+          "HeroPart": {
+            "Title": {
+              "Text": "Valorant news"
+            },
+            "ColorList": {
+              "Text": "Gray"
+            },
+            "Body": {
+              "Markdown": "Everything that's fresh! Everything that's Valorant!"
+            }
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentItemVersionId": "[js: uuid()]",
+          "ContentType": "Page",
+          "DisplayText": "Valorant agents",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2023-04-27T07:16:58.327677Z",
+          "PublishedUtc": "2023-04-27T07:16:58.3497253Z",
+          "CreatedUtc": "2023-04-26T14:20:06.3065778Z",
+          "Owner": "[js: uuid()]",
+          "Author": "admin",
+          "AutoroutePart": {
+            "Path": "agents",
+            "SetHomepage": false,
+            "Disabled": false,
+            "RouteContainedItems": false,
+            "Absolute": false
+          },
+          "FlowPart": {
+            "Widgets": [
+              {
+                "ContentItemId": "[js: uuid()]",
+                "ContentItemVersionId": "[js: uuid()]",
+                "ContentType": "ExpandableWidget",
+                "DisplayText": "",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-04-27T07:16:58.3313675Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": "",
+                "Author": "admin",
+                "ExpandableWidget": {
+                  "Title": {
+                    "Text": "Phoenix - Duelist"
+                  },
+                  "Text": {
+                    "Html": "<p>Hailing from the U.K., Phoenix's star power shines through in his fighting style, igniting the battlefield with flash and flare. Whether he's got backup or not, he'll rush into a fight on his own terms.<br></p>"
+                  },
+                  "Color": {
+                    "Text": "Gray"
+                  },
+                  "AgentImage": {
+                    "Paths": [
+                      "mediafields/phoenixA.png"
+                    ],
+                    "MediaTexts": [
+                      ""
+                    ]
+                  }
+                },
+                "AdditionalStylingPart": {
+                  "CustomClasses": null,
+                  "RemoveGridExtensionClasses": false
+                },
+                "@WeldedPartSettings": {
+                  "AdditionalStylingPart": {}
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                }
+              },
+              {
+                "ContentItemId": "[js: uuid()]",
+                "ContentItemVersionId": "[js: uuid()]",
+                "ContentType": "ExpandableWidget",
+                "DisplayText": "",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-04-27T07:16:58.3350214Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": "",
+                "Author": "admin",
+                "ExpandableWidget": {
+                  "Title": {
+                    "Text": "Reyna - Duelist"
+                  },
+                  "Text": {
+                    "Html": "<p>Forged in the heart of Mexico, Reyna dominates single combat, popping off with each kill she scores. Her capability is only limited by her raw skill, making her highly dependent on performance.<br></p>"
+                  },
+                  "Color": {
+                    "Text": "Black"
+                  },
+                  "AgentImage": {
+                    "Paths": [
+                      "mediafields/reynaA.png"
+                    ],
+                    "MediaTexts": [
+                      ""
+                    ]
+                  }
+                },
+                "AdditionalStylingPart": {
+                  "CustomClasses": null,
+                  "RemoveGridExtensionClasses": false
+                },
+                "@WeldedPartSettings": {
+                  "AdditionalStylingPart": {}
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                }
+              },
+              {
+                "ContentItemId": "[js: uuid()]",
+                "ContentItemVersionId": "[js: uuid()]",
+                "ContentType": "ExpandableWidget",
+                "DisplayText": "",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-04-27T07:16:58.3396695Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": "",
+                "Author": "admin",
+                "ExpandableWidget": {
+                  "Title": {
+                    "Text": "Sage - Sentinel"
+                  },
+                  "Text": {
+                    "Html": "<p>The stronghold of China, Sage creates safety for herself and her team wherever she goes. Able to revive fallen friends and stave off aggressive pushes, she provides a calm center to a hellish fight.<br></p>"
+                  },
+                  "Color": {
+                    "Text": "White"
+                  },
+                  "AgentImage": {
+                    "Paths": [
+                      "mediafields/sageA.png"
+                    ],
+                    "MediaTexts": [
+                      ""
+                    ]
+                  }
+                },
+                "AdditionalStylingPart": {
+                  "CustomClasses": null,
+                  "RemoveGridExtensionClasses": false
+                },
+                "@WeldedPartSettings": {
+                  "AdditionalStylingPart": {}
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                }
+              },
+              {
+                "ContentItemId": "[js: uuid()]",
+                "ContentItemVersionId": "[js: uuid()]",
+                "ContentType": "ExpandableWidget",
+                "DisplayText": "",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-04-27T07:16:58.3433001Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": "",
+                "Author": "admin",
+                "ExpandableWidget": {
+                  "Title": {
+                    "Text": "Omen - Controller"
+                  },
+                  "Text": {
+                    "Html": "<p>A phantom of a memory, Omen hunts in the shadows. He renders enemies blind, teleports across the field, then lets paranoia take hold as his foe scrambles to learn where he might strike next.<br></p>"
+                  },
+                  "Color": {
+                    "Text": "Gray"
+                  },
+                  "AgentImage": {
+                    "Paths": [
+                      "mediafields/omenA.png"
+                    ],
+                    "MediaTexts": [
+                      ""
+                    ]
+                  }
+                },
+                "AdditionalStylingPart": {
+                  "CustomClasses": null,
+                  "RemoveGridExtensionClasses": false
+                },
+                "@WeldedPartSettings": {
+                  "AdditionalStylingPart": {}
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                }
+              }
+            ]
+          },
+          "HeroPart": {
+            "Title": {
+              "Text": "Valorant agents"
+            },
+            "ColorList": {
+              "Text": "White"
+            },
+            "Body": {
+              "Markdown": "Agents are the playable characters in VALORANT, representing an agent of the VALORANT Protocol. Each agent serves as a different class with four abilities and are mostly unlocked by progressing through their Contract.\r\nDepending on their abilities and playstyle, agents will be assigned to one of four roles:\r\n\r\n* Controller agents are experts in slicing up dangerous territory to set their team up for success.\r\n* Duelist agents are self-sufficient fraggers who their team expects, through abilities and skills, to get high frags and seek out engagements first.\r\n* Initiator agents challenge angles by setting up their team to enter contested ground and push defenders away.\r\n* Sentinel agents are defensive experts who can lock down areas and watch flanks, both on attacker and defender rounds."
+            }
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentItemVersionId": "[js: uuid()]",
+          "ContentType": "Page",
+          "DisplayText": "Sage",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2023-04-27T20:13:31.5064313Z",
+          "PublishedUtc": "2023-04-27T20:13:31.5088792Z",
+          "CreatedUtc": "2023-04-27T20:13:31.5064313Z",
+          "Owner": "",
+          "Author": "admin",
+          "AutoroutePart": {
+            "Path": "sageA",
+            "SetHomepage": false,
+            "Disabled": false,
+            "RouteContainedItems": false,
+            "Absolute": false
+          },
+          "FlowPart": {
+            "Widgets": [
+              {
+                "ContentItemId": "[js: uuid()]",
+                "ContentItemVersionId": "[js: uuid()]",
+                "ContentType": "HtmlWidget",
+                "DisplayText": null,
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-04-27T20:13:31.5028543Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "HtmlBodyPart": {
+                  "Html": "<div class=\"AgentContainer\">\r\n<img class=\"banner\" src=\"/valorantstuff/media/mediafields/sage.jpg\">\r\n<h1 class=\"title\">Abilities</h1>\r\n<div class=\"videos\">\r\n<video class=\"videoA\" src=\"/valorantstuff/media/mediafields/Sage_Q.mp4\" type=\"video/mp4\" controls=\"\" autoplay=\"\" muted=\"\" loop=\"\"></video>\r\n<video class=\"videoA\" src=\"/valorantstuff/media/mediafields/Sage_C.mp4\" type=\"video/mp4\" controls=\"\" autoplay=\"\" muted=\"\" loop=\"\"></video>\r\n<video class=\"videoA\" src=\"/valorantstuff/media/mediafields/Sage_E.mp4\" type=\"video/mp4\" controls=\"\" autoplay=\"\" muted=\"\" loop=\"\"></video>\r\n<video class=\"videoA\" src=\"/valorantstuff/media/mediafields/Sage_X.mp4\" type=\"video/mp4\" controls=\"\" autoplay=\"\" muted=\"\" loop=\"\"></video>\r\n</div>\r\n<p class=\"ability\"><strong>Q - Slow Orb:</strong> Throws an orb, after reaching the target area, it exploads into a huge patch of ice, which slows down enemies and allies. <strong>Cost: 200, Max charges: 2</strong></p>\r\n<p class=\"ability\"><strong>C - Barrier Orb:</strong> Places a solid wall, that can be rotated by the player, it fortifies after a few seconds. <strong>Cost: 400, Max charges: 1</strong></p>\r\n<p class=\"ability\"><strong>E - Healing Orb:</strong> Targeting an ally heals them for 60 health over time (quick), healing yourself only heals 30 health over time. <strong>Cost: 0, Max charges: 1</strong></p>\r\n<p class=\"ability\"><strong>X - Resurrection:</strong> Resurrect a targeted ally to full health, the full resurrection takes a few seconds, during this time the target of the ability is vulnerable. <strong>Cost: 8 ultimate orbs</strong></p>\r\n<h1 class=\"title\">Tips and Tricks</h1>\r\n<p class=\"ability\">1. The Barrier Orb has an insane amunt of usefulness, there are different tactics as to where to place them on youtube everywhere, highly suggest looking for said tutorials. <br> <br>\r\n\r\n2. You almost never want to heal yourself, unless you are the last person standing, use the Healing Orb wisely. <br><br>\r\n\r\n3. Resurrection is and Barrier Orb are the main reasons why this character is in almost every match. Her Ultimate basically means, she makes the game 6v5 for that round, while her Barrier Orb is an amazing tool for both attacking and defending. <br><br>\r\n\r\n4. There are people, who use the term \"healer\" in Valorant. It is safe to say, that these people are wrong, there is no such thing as Healer. The real thing that matters is your aim, don't pick Sage if you expect to be treated lightly if you don't pull your weight on the score board.</p>\r\n\r\n<iframe class=\"yt\" src=\"https://www.youtube.com/embed/1aRwM_QsqQI\">\r\n</iframe>\r\n</div>"
+                },
+                "AdditionalStylingPart": {
+                  "CustomClasses": null,
+                  "RemoveGridExtensionClasses": false
+                },
+                "@WeldedPartSettings": {
+                  "AdditionalStylingPart": {}
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                }
+              }
+            ]
+          },
+          "HeroPart": {
+            "Title": {
+              "Text": "Sage"
+            },
+            "ColorList": {
+              "Text": "White"
+            },
+            "Body": {
+              "Markdown": "The stronghold of China, Sage creates safety for herself and her team wherever she goes. Able to revive fallen friends and stave off aggressive pushes, she provides a calm center to a hellish fight."
+            }
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentItemVersionId": "[js: uuid()]",
+          "ContentType": "Page",
+          "DisplayText": "Reyna",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2023-04-27T20:05:11.0187934Z",
+          "PublishedUtc": "2023-04-27T20:05:11.0258238Z",
+          "CreatedUtc": "2023-04-27T19:58:11.4755014Z",
+          "Owner": "",
+          "Author": "admin",
+          "AutoroutePart": {
+            "Path": "reynaA",
+            "SetHomepage": false,
+            "Disabled": false,
+            "RouteContainedItems": false,
+            "Absolute": false
+          },
+          "FlowPart": {
+            "Widgets": [
+              {
+                "ContentItemId": "[js: uuid()]",
+                "ContentItemVersionId": "[js: uuid()]",
+                "ContentType": "HtmlWidget",
+                "DisplayText": "",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-04-27T20:05:11.0219468Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": "",
+                "Author": "admin",
+                "HtmlBodyPart": {
+                  "Html": "<div class=\"AgentContainer\">\r\n<img class=\"banner\" src=\"/valorantstuff/media/mediafields/reyna.jpg\">\r\n<h1 class=\"title\">Abilities</h1>\r\n<div class=\"videos\">\r\n<video class=\"videoA\" src=\"/valorantstuff/media/mediafields/Reyna_Q.mp4\" type=\"video/mp4\" controls=\"\" autoplay=\"\" muted=\"\" loop=\"\"></video>\r\n<video class=\"videoA\" src=\"/valorantstuff/media/mediafields/Reyna_C.mp4\" type=\"video/mp4\" controls=\"\" autoplay=\"\" muted=\"\" loop=\"\"></video>\r\n<video class=\"videoA\" src=\"/valorantstuff/media/mediafields/Reyna_E.mp4\" type=\"video/mp4\" controls=\"\" autoplay=\"\" muted=\"\" loop=\"\"></video>\r\n<video class=\"videoA\" src=\"/valorantstuff/media/mediafields/Reyna_X.mp4\" type=\"video/mp4\" controls=\"\" autoplay=\"\" muted=\"\" loop=\"\"></video>\r\n</div>\r\n<p class=\"ability\"><strong>Q - Devour:</strong> Instantly consume a nearby soul orb, rapidly healing for a short duration. Health gained through this skill exceeding 100 will decay over time. If Empress is active, this skill will automatically cast and not consume the Soul Orb. <strong>Cost: 100, Max charges: 4, shared with Dismiss</strong></p>\r\n<p class=\"ability\"><strong>C - Dismiss:</strong> Instantly consume a nearby Soul Orb, becoming intangible for a short duration. If Empress is active, also become invisible. <strong>Cost: 100, Max charges: 4, shared with Devour</strong></p>\r\n<p class=\"ability\"><strong>E - Leer:</strong> \tEquip an ethereal, destructible eye. Activate to cast the eye a short distance forward. The eye will Nearsight all enemies who look at it. <strong>Cost: 200, Max charges: 2</strong></p>\r\n<p class=\"ability\"><strong>X - Empress:</strong> Instantly enter a frenzy, increasing firing, equip and reload speed dramatically. Gain infinite charges of Soul Harvest abilities. Scoring a kill renews the duration. <strong>Cost: 6 ultimate orbs</strong></p>\r\n<h1 class=\"title\">Tips and Tricks</h1>\r\n<p class=\"ability\">1. Despite sharing the same pool of charges, in most (but not all!) cases Devour is much more useful than Dismiss. The heal is extremely rapid and should be used to keep you in the fight so you can snowball as much as possible. <br> <br>\r\n\r\n2. Leer doesn't blind you or your allies - the effect only applies to enemies. <br><br>\r\n\r\n3. Empress increases your firing rate with any weapon by around 33-35%. <br><br>\r\n\r\n4. Reyna is a hard character to play. Someone who is just starting out on Valorant should look for other agents instead. Reyna heavily relies on the player's skill and especially on the player's aim. Reyna players aim for a high kill count to maximize her effectiveness, to be a good fragger, you need a lot of practice.</p>\r\n\r\n<iframe class=\"yt\" src=\"https://www.youtube.com/embed/IzsQNYrq9AM\">\r\n</iframe>\r\n</div>"
+                },
+                "AdditionalStylingPart": {
+                  "CustomClasses": null,
+                  "RemoveGridExtensionClasses": false
+                },
+                "@WeldedPartSettings": {
+                  "AdditionalStylingPart": {}
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                }
+              }
+            ]
+          },
+          "HeroPart": {
+            "Title": {
+              "Text": "Reyna"
+            },
+            "ColorList": {
+              "Text": "Black"
+            },
+            "Body": {
+              "Markdown": "Forged in the heart of Mexico, Reyna dominates single combat, popping off with each kill she scores. Her capability is only limited by her raw skill, making her highly dependent on performance."
+            }
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentItemVersionId": "[js: uuid()]",
+          "ContentType": "Page",
+          "DisplayText": "Omen",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2023-04-27T20:04:06.2275718Z",
+          "PublishedUtc": "2023-04-27T20:04:06.2301328Z",
+          "CreatedUtc": "2023-04-27T20:04:06.2275718Z",
+          "Owner": "",
+          "Author": "admin",
+          "AutoroutePart": {
+            "Path": "omenA",
+            "SetHomepage": false,
+            "Disabled": false,
+            "RouteContainedItems": false,
+            "Absolute": false
+          },
+          "FlowPart": {
+            "Widgets": [
+              {
+                "ContentItemId": "[js: uuid()]",
+                "ContentItemVersionId": "[js: uuid()]",
+                "ContentType": "HtmlWidget",
+                "DisplayText": null,
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-04-27T20:04:06.2241542Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "HtmlBodyPart": {
+                  "Html": "<div class=\"AgentContainer\">\r\n<img class=\"banner\" src=\"/valorantstuff/media/mediafields/omen.jpg\">\r\n<h1 class=\"title\">Abilities</h1>\r\n<div class=\"videos\">\r\n<video class=\"videoA\" src=\"/valorantstuff/media/mediafields/Omen_Q.mp4\" type=\"video/mp4\" controls=\"\" autoplay=\"\" muted=\"\" loop=\"\"></video>\r\n<video class=\"videoA\" src=\"/valorantstuff/media/mediafields/Omen_C.mp4\" type=\"video/mp4\" controls=\"\" autoplay=\"\" muted=\"\" loop=\"\"></video>\r\n<video class=\"videoA\" src=\"/valorantstuff/media/mediafields/Omen_E.mp4\" type=\"video/mp4\" controls=\"\" autoplay=\"\" muted=\"\" loop=\"\"></video>\r\n<video class=\"videoA\" src=\"/valorantstuff/media/mediafields/Omen_X.mp4\" type=\"video/mp4\" controls=\"\" autoplay=\"\" muted=\"\" loop=\"\"></video>\r\n</div>\r\n<p class=\"ability\"><b>Q - Paranoia:</b> A blinding orb, that briefly reduces the vision range and deafens all players it touches. This projectile can pass straight through walls. It can also affect your teammates, so be careful. <b>Cost: 250, Max charges: 1</b></p>\r\n<p class=\"ability\"><b>C - Shrouded Step:</b> After a brief channeling, teleport your character to a desired lcoation withing short range. <b>Cost: 100, Max charges: 2</b></p>\r\n<p class=\"ability\"><b>E - Dark Cover:</b> Practically a smoke ability, you can put this smoke bubble to the desired place in a long range, it goes through walls. This smoke can be thrown directly or using a map. <b>Cost: 0, Max charges: 2</b></p>\r\n<p class=\"ability\"><b>X - From the Shadows:</b> Omen pulls up the map and can choose any location to teleport to. Once you pick your location, an ethereal body appears where Omen will teleport to before he materializes, giving the other team a chance to destroy his shrouded figure. Omen can cancel it and return from near certain death or materialize after 4 seconds, able to roam about to his heart’s content. <b>Cost: 7 ultimate orbs</b></p>\r\n<h1 class=\"title\">Tips and Tricks</h1>\r\n<p class=\"ability\">1. Use the teleport abilities to your advantage, you can reach places on the map that other agents can, which means you can have the element of surprise on your side. <br> <br>\r\n\r\n2. There is a neat little trich you can use as Omen. Let's say the spike dropped somewhere, because your teammate died. Most likely the enemy players will watch the bomb carefully. What you can do in this situation is to walk to the site thats the furthest away, use your ult ON the spike, then cancel your ultimate. Now you are on a different site and you have the spike! <br><br>\r\n\r\n3. Keep in mind, that his smoke is like a small dimension. If you are outside the smoke, you don't see what's inside, but if you are inside, you don't see what's outside. So if there is an enemy standing in your smoke, and you walk into it, your enemy will have the upper hand, because he will see your body first. <br><br>\r\n\r\n4. The neat little teleport trick i mentioned above can be countered however. If your enemy stands directly on the spike, your teleportation snatch won't work, so be careful, not to leave this play to the last seconds! </p>\r\n\r\n<iframe class=\"yt\" src=\"https://www.youtube.com/embed/_jJdWy6bDj4\">\r\n</iframe>\r\n</div>"
+                },
+                "AdditionalStylingPart": {
+                  "CustomClasses": null,
+                  "RemoveGridExtensionClasses": false
+                },
+                "@WeldedPartSettings": {
+                  "AdditionalStylingPart": {}
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                }
+              }
+            ]
+          },
+          "HeroPart": {
+            "Title": {
+              "Text": "Omen"
+            },
+            "ColorList": {
+              "Text": "Gray"
+            },
+            "Body": {
+              "Markdown": "A phantom of a memory, Omen hunts in the shadows. He renders enemies blind, teleports across the field, then lets paranoia take hold as his foe scrambles to learn where he might strike next."
+            }
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentItemVersionId": "[js: uuid()]",
+          "ContentType": "Page",
+          "DisplayText": "Phoenix",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2023-04-27T19:58:25.2735835Z",
+          "PublishedUtc": "2023-04-27T19:58:25.2799657Z",
+          "CreatedUtc": "2023-04-27T18:41:30.8197397Z",
+          "Owner": "",
+          "Author": "admin",
+          "AutoroutePart": {
+            "Path": "phoenixA",
+            "SetHomepage": false,
+            "Disabled": false,
+            "RouteContainedItems": false,
+            "Absolute": false
+          },
+          "FlowPart": {
+            "Widgets": [
+              {
+                "ContentItemId": "[js: uuid()]",
+                "ContentItemVersionId": "[js: uuid()]",
+                "ContentType": "HtmlWidget",
+                "DisplayText": "",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-04-27T19:58:25.2762757Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": "",
+                "Author": "admin",
+                "HtmlBodyPart": {
+                  "Html": "<div class=\"AgentContainer\">\r\n<img class=\"banner\" src=\"/valorantstuff/media/mediafields/phoenix2.jpg\">\r\n<h1 class=\"title\">Abilities</h1>\r\n<div class=\"videos\">\r\n<video class=\"videoA\" src=\"/valorantstuff/media/mediafields/Phoenix_Q.mp4\" type=\"video/mp4\" controls=\"\" autoplay=\"\" muted=\"\" loop=\"\"></video>\r\n<video class=\"videoA\" src=\"/valorantstuff/media/mediafields/Phoenix_C.mp4\" type=\"video/mp4\" controls=\"\" autoplay=\"\" muted=\"\" loop=\"\"></video>\r\n<video class=\"videoA\" src=\"/valorantstuff/media/mediafields/Phoenix_E.mp4\" type=\"video/mp4\" controls=\"\" autoplay=\"\" muted=\"\" loop=\"\"></video>\r\n<video class=\"videoA\" src=\"/valorantstuff/media/mediafields/Phoenix_X.mp4\" type=\"video/mp4\" controls=\"\" autoplay=\"\" muted=\"\" loop=\"\"></video>\r\n</div>\r\n<p class=\"ability\"><strong>Q - Curveball:</strong> A flashbang that you can quickly curve around corners. Right click to curve it right, left to curve it left. It’s an ideal engage tool, but be careful, because it can blind you or your allies if you misfire. <strong>Cost: 250, Max charges: 2</strong></p>\r\n<p class=\"ability\"><strong>C - Blaze:</strong> A wall of fire that you can curve as it casts. It obscures vision, damages enemies that walk through/stand on it, and heals you if you’re standing in it. It can be used to block choke points or protect you as you or your allies plant the spike. <strong>Cost: 150, Max charges: 1</strong></p>\r\n<p class=\"ability\"><strong>E - Hothands:</strong> Effectively a molotov grenade that also heals you if you stand in its flames and deals AoE damage to enemies within it. Instead of being on a cooldown, this ability refreshes after you get two kills. <strong>Cost: 0, Max charges: 1</strong></p>\r\n<p class=\"ability\"><strong>X - Run it Back:</strong> After casting at a location, you have a short amount of time where if you die, you will come back to life and return to where you cast it. Just be sure to cast it from a hidden location as it does take some time for you to resurrect and you’ll be vulnerable to attacks when you return to your body. Lesser known fact is that if you cast the ultimate, you heal back to full health. <strong>Cost: 6 ultimate orbs</strong></p>\r\n<h1 class=\"title\">Tips and Tricks</h1>\r\n<p class=\"ability\">1. It depends on the context, but in some situations you may want to duck into a corner to use your abilities to heal yourself before an engagement. Ideally of course, you’d want to simultaneously heal while using them as utility. <br> <br>\r\n\r\n2. Curveball is great for throwing into alleyways and behind walls, but don’t forget that you can look upwards to curve it onto an enemy that’s above you in a window or on a ledge. <br>\r\n\r\nYou can also throw your Curveball through a Blaze wall to blind an opponent and avoid blinding yourself. <br> <br>\r\n\r\n3. Run it Back is an incredible mix-up tool when used in combination with the teleporters on Bind. You can use it on one side, run through a teleporter and try to get kills at that site. If you’re successful, you can just run through with your resurrected Phoenix and plant, or if it’s heavily fortified, you can just take your death and plant on the side you resurrected on. <br><br>\r\n\r\n4. Run it Back can be the perfect 1v5 tool, don't forget that if you cast your it, you get back all the HP you lost during that round. There are situations, where you get hit in a fight, but in order to clutch the round, you fall back to a corner, where you cast you Ultimate, to go back to the fight, and after it, you are back to full health, essentially you can have 299 health in one round, isn't that cool? With the healing effect of your abilities, its even more.</p>\r\n\r\n<iframe class=\"yt\" src=\"https://www.youtube.com/embed/ttJMFW2wUQM\">\r\n</iframe>\r\n</div>"
+                },
+                "AdditionalStylingPart": {
+                  "CustomClasses": null,
+                  "RemoveGridExtensionClasses": false
+                },
+                "@WeldedPartSettings": {
+                  "AdditionalStylingPart": {}
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                }
+              }
+            ]
+          },
+          "HeroPart": {
+            "Title": {
+              "Text": "Phoenix"
+            },
+            "ColorList": {
+              "Text": "Black"
+            },
+            "Body": {
+              "Markdown": "Hailing from the U.K., Phoenix's star power shines through in his fighting style, igniting the battlefield with flash and flare. Whether he's got backup or not, he'll rush into a fight on his own terms."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ContentDefinition",
+      "ContentTypes": [
+        {
+          "Name": "HtmlWidget",
+          "DisplayName": "Html Widget",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Stereotype": "Widget",
+              "Securable": true
+            }
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "HtmlBodyPart",
+              "Name": "HtmlBodyPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Editor": "Trumbowyg"
+                },
+                "HtmlBodyPartSettings": {
+                  "SanitizeHtml": false
+                },
+                "HtmlBodyPartTrumbowygEditorSettings": {
+                  "Options": "{\r\n    autogrow: true,\r\n    btns: [\r\n        [\"viewHTML\"],\r\n        [\"undo\", \"redo\"],\r\n        [\"formatting\"],\r\n        [\"strong\", \"em\", \"del\"],\r\n        [\"foreColor\", \"backColor\"],\r\n        [\"superscript\", \"subscript\"],\r\n        [\"link\"],\r\n        [\"insertShortcode\"],\r\n        [\"image\"],\r\n        [\"align\"],\r\n        [\"unorderedList\", \"orderedList\"],\r\n        [\"horizontalRule\"],\r\n        [\"removeformat\"],\r\n        [\"fullscreen\"]\r\n    ],\r\n    btnsDef: {\r\n        align: {\r\n            dropdown: [\"justifyLeft\", \"justifyCenter\", \"justifyRight\", \"justifyFull\"],\r\n            ico: \"justifyLeft\"\r\n        },\r\n        image: {\r\n            dropdown: [\"insertImage\", \"base64\", \"noembed\"],\r\n            ico: \"insertImage\"\r\n        }\r\n    }\r\n}"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "ContentParts": [
+        {
+          "Name": "HtmlBodyPart",
+          "Settings": {
+            "ContentPartSettings": {
+              "Attachable": true,
+              "Description": "Provides an HTML Body for your content item."
+            }
+          },
+          "ContentPartFieldDefinitionRecords": []
+        }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+// Base theme
+@import "../../../Lombiq.BaseTheme/Lombiq.BaseTheme/Assets/Styles/base";
+
+// Configuration and helpers
+@import "abstracts/native-variables";
+
+// Rules for every page
+@import "general/general";
+// @import "general/fonts";
+@import "general/hero-part";
+
+// Main menu
+@import "components/main-menu";

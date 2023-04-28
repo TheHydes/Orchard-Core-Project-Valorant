@@ -2,7 +2,9 @@
 @using Microsoft.AspNetCore.Html;
 @using OrchardCore.ContentFields.Settings;
 @using OrchardCore.ContentManagement;
-@*@using OrchardCore.Flows.Models;*@
+@using OrchardCore.Media;
+
+@inject IMediaFileStore mediaFileStore
 
 @{
     var contentItem = (ContentItem)Model.ContentItem;
@@ -10,6 +12,11 @@
     var widgetTitle = widget.Title.Text;
 
     var widgetText = HtmlString.Empty;
+
+    var imageUrl = widget.AgentImage.Paths?.FirstOrDefault() is { } path ? mediaFileStore.MapPathToPublicUrl(path) : null;
+    var imageAlt = widget.AgentImage.MediaTexts?.FirstOrDefault();
+    var imageName = System.IO.Path.GetFileNameWithoutExtension(imageUrl);
+    var imageLink = $"/valorantstuff/{imageName}";
 
     if (widget.Text.Html != null)
     {
@@ -24,5 +31,10 @@
         <span class="ExpandableWidget__titleText">@widgetTitle</span>
         <i class="ExpandableWidget__arrow"></i>
     </button>
-    <div class="ExpandableWidget__text">@widgetText</div>
+    <div class="ExpandableWidget__textAndImage">
+        <div class="ExpandableWidget__text">@widgetText</div>
+        <a class="ImageButton" href="@imageLink">
+            <img class="ExpandableWidget__image" src="@imageUrl" alt="@imageAlt" />
+        </a>
+    </div>
 </div>

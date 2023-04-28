@@ -1,13 +1,11 @@
 @using Lombiq.BaseTheme.Constants
 @using Lombiq.BaseTheme.Services
 @using OrchardCore.DisplayManagement.Html
-@using OrchardCore.DisplayManagement
-@using OrchardCore.Settings
 
 @inject ICssClassHolder CssClassHolder
 
 @{
-    var navigationZones = CssClassHolder.GetZoneClasses(ZoneNames.Navigation);
+    var navigationZones = CssClassHolder[ZoneNames.Navigation];
     navigationZones.Remove("navbar-expand-md");
     navigationZones.Add("valorantStuffMainMenu");
     navigationZones.Add("navbar-expand-lg");
@@ -19,11 +17,14 @@
     <div class="container valorantStuffMainMenu__container">
         <div>
             <a href="@Url.Content("~")">
-                <img src="@Url.Content("~/ValorantStuff.Theme/images/valorant-stuff-logo.png")" alt="@T["ValorantStuff Logo"]" class="valorantStuffMainMenu__container__logo">
+                <img src="@Url.Content("~/ValorantStuff.Theme/images/valorant-stuff-logo1.png")" alt="@T["ValorantStuff Logo"]" class="valorantStuffMainMenu__container__logo">
             </a>
         </div>
         <button type="button" class="navbar-toggler valorantStuffMainMenu__togglerButton" data-bs-toggle="collapse" data-bs-target="#mainMenu, #togglerIcon" aria-expanded="false" aria-controls="navbar" aria-label="@T["Toggle navigation"]">
             <span id="togglerIcon" class="navbar-toggler-icon valorantStuffMainMenu__togglerButton__togglerIcon"></span>
         </button>
+        <div class="collapse navbar-collapse" id="mainMenu">
+            <menu alias="alias:main-menu" cache-id="main-menu" cache-fixed-duration="00:05:00" cache-tag="alias:main-menu" />        
+        </div>
     </div>
 </zone>

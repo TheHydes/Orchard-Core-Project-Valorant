@@ -6,6 +6,7 @@
   "issetuprecipe": true,
   "categories": [ "valorantstuff" ],
   "tags": [],
+
   "steps": [
     {
       "name": "recipes",
@@ -25,22 +26,22 @@
       "name": "content",
       "data": [
         {
-          "ContentItemId": "00000000000000000000000000",
+          "ContentItemId": "[js: uuid()]",
           "ContentItemVersionId": "[js: uuid()]",
           "ContentType": "Page",
           "DisplayText": "This is ValorantStuff Hub",
           "Latest": true,
           "Published": true,
-          "ModifiedUtc": "2023-04-15T12:43:12.122884Z",
-          "PublishedUtc": "2023-04-15T12:43:12.1691616Z",
-          "CreatedUtc": "2023-04-15T12:43:12.122884Z",
+          "ModifiedUtc": "2023-04-25T12:43:12.122884Z",
+          "PublishedUtc": "2023-04-25T12:43:12.1691616Z",
+          "CreatedUtc": "2023-04-25T12:43:12.122884Z",
           "Owner": "",
           "Author": "admin",
           "TitlePart": {
             "Title": "This is ValorantStuff Hub"
           },
           "AutoroutePart": {
-            "Path": "valorantstuff-home",
+            "Path": "valorantstuff-hub",
             "SetHomepage": true,
             "Disabled": false,
             "RouteContainedItems": false,
@@ -49,270 +50,8 @@
           "FlowPart": {
             "Widgets": []
           }
-        },
-        {
-          "ContentItemId": "00000000000000000000000001",
-          "ContentItemVersionId": "[js: uuid()]",
-          "ContentType": "Menu",
-          "DisplayText": "Main Menu",
-          "Latest": true,
-          "Published": true,
-          "ModifiedUtc": "2023-04-20T15:00:33.8560101Z",
-          "PublishedUtc": "2023-04-20T15:00:33.8924526Z",
-          "CreatedUtc": "2023-04-20T14:32:57.8340247Z",
-          "Owner": "[js: uuid()]",
-          "Author": "admin",
-          "TitlePart": {
-            "Title": "Main Menu"
-          },
-          "AliasPart": {
-            "Alias": "main-menu"
-          },
-          "MenuPart": {},
-          "MenuItemsListPart": {
-            "MenuItems": [
-              {
-                "ContentItemId": "00000000000000000000000002",
-                "ContentItemVersionId": "[js: uuid()]",
-                "ContentType": "LinkMenuItem",
-                "DisplayText": "About Us",
-                "Latest": false,
-                "Published": false,
-                "ModifiedUtc": "2023-04-20T14:33:36.3910323Z",
-                "PublishedUtc": null,
-                "CreatedUtc": null,
-                "Owner": null,
-                "Author": "admin",
-                "LinkMenuItemPart": {
-                  "Name": "About Us",
-                  "Url": "~/about-us"
-                },
-                "LinkMenuItem": {}
-              },
-              {
-                "ContentItemId": "00000000000000000000000003",
-                "ContentItemVersionId": "[js: uuid()]",
-                "ContentType": "LinkMenuItem",
-                "DisplayText": "News",
-                "Latest": false,
-                "Published": false,
-                "ModifiedUtc": "2023-04-20T14:33:52.6981034Z",
-                "PublishedUtc": null,
-                "CreatedUtc": null,
-                "Owner": null,
-                "Author": "admin",
-                "LinkMenuItemPart": {
-                  "Name": "News",
-                  "Url": "~/news"
-                },
-                "LinkMenuItem": {}
-              },
-              {
-                "ContentItemId": "00000000000000000000000004",
-                "ContentItemVersionId": "[js: uuid()]",
-                "ContentType": "LinkMenuItem",
-                "DisplayText": "Agents",
-                "Latest": false,
-                "Published": false,
-                "ModifiedUtc": "2023-04-20T14:34:04.1567322Z",
-                "PublishedUtc": null,
-                "CreatedUtc": null,
-                "Owner": null,
-                "Author": "admin",
-                "LinkMenuItemPart": {
-                  "Name": "Agents",
-                  "Url": "~/agents"
-                },
-                "LinkMenuItem": {}
-              },
-              {
-                "ContentItemId": "00000000000000000000000005",
-                "ContentItemVersionId": "[js: uuid()]",
-                "ContentType": "LinkMenuItem",
-                "DisplayText": "Training",
-                "Latest": false,
-                "Published": false,
-                "ModifiedUtc": "2023-04-20T14:34:17.6424679Z",
-                "PublishedUtc": null,
-                "CreatedUtc": null,
-                "Owner": null,
-                "Author": "admin",
-                "LinkMenuItemPart": {
-                  "Name": "Training",
-                  "Url": "~/training"
-                },
-                "LinkMenuItem": {}
-              },
-              {
-                "ContentItemId": "00000000000000000000000006",
-                "ContentItemVersionId": "[js: uuid()]",
-                "ContentType": "LinkMenuItem",
-                "DisplayText": "Open-Source",
-                "Latest": false,
-                "Published": false,
-                "ModifiedUtc": "2023-04-20T14:34:31.7068735Z",
-                "PublishedUtc": null,
-                "CreatedUtc": null,
-                "Owner": null,
-                "Author": "admin",
-                "LinkMenuItemPart": {
-                  "Name": "Open-Source",
-                  "Url": "~/open-source"
-                },
-                "LinkMenuItem": {}
-              },
-              {
-                "ContentItemId": "00000000000000000000000007",
-                "ContentItemVersionId": "[js: uuid()]",
-                "ContentType": "LinkMenuItem",
-                "DisplayText": "Blog",
-                "Latest": false,
-                "Published": false,
-                "ModifiedUtc": "2023-04-20T14:34:42.922597Z",
-                "PublishedUtc": null,
-                "CreatedUtc": null,
-                "Owner": null,
-                "Author": "admin",
-                "LinkMenuItemPart": {
-                  "Name": "Blog",
-                  "Url": "~/blog"
-                },
-                "LinkMenuItem": {}
-              }
-            ]
-          },
-          "@WeldedPartSettings": {
-            "MenuPart": {
-              "Position": "3"
-            },
-            "MenuItemsListPart": {
-              "Position": "4"
-            }
-          }
-        },
-        {
-          "name": "media",
-          "Files": [
-            {
-              "SourcePath": "mediafields/gekkoDivider.jpg",
-              "TargetPath": "mediafields/gekkoDivider.jpg"
-            },
-            {
-              "SourcePath": "mediafields/logo.png",
-              "TargetPath": "mediafields/logo.png"
-            },
-            {
-              "SourcePath": "mediafields/logoMaybe.png",
-              "TargetPath": "mediafields/logoMaybe.png"
-            },
-            {
-              "SourcePath": "mediafields/news.jpg",
-              "TargetPath": "mediafields/news.jpg"
-            },
-            {
-              "SourcePath": "mediafields/omen.jpg",
-              "TargetPath": "mediafields/omen.jpg"
-            },
-            {
-              "SourcePath": "mediafields/Omen_C.mp4",
-              "TargetPath": "mediafields/Omen_C.mp4"
-            },
-            {
-              "SourcePath": "mediafields/Omen_E.mp4",
-              "TargetPath": "mediafields/Omen_E.mp4"
-            },
-            {
-              "SourcePath": "mediafields/Omen_Q.mp4",
-              "TargetPath": "mediafields/Omen_Q.mp4"
-            },
-            {
-              "SourcePath": "mediafields/Omen_X.mp4",
-              "TargetPath": "mediafields/Omen_X.mp4"
-            },
-            {
-              "SourcePath": "mediafields/omenA.png",
-              "TargetPath": "mediafields/omenA.png"
-            },
-            {
-              "SourcePath": "mediafields/phoenix.jpg",
-              "TargetPath": "mediafields/phoenix.jpg"
-            },
-            {
-              "SourcePath": "mediafields/Phoenix_C.mp4",
-              "TargetPath": "mediafields/Phoenix_C.mp4"
-            },
-            {
-              "SourcePath": "mediafields/Phoenix_E.mp4",
-              "TargetPath": "mediafields/Phoenix_E.mp4"
-            },
-            {
-              "SourcePath": "mediafields/Phoenix_Q.mp4",
-              "TargetPath": "mediafields/Phoenix_Q.mp4"
-            },
-            {
-              "SourcePath": "mediafields/Phoenix_X.mp4",
-              "TargetPath": "mediafields/Phoenix_X.mp4"
-            },
-            {
-              "SourcePath": "mediafields/phoenix2.jpg",
-              "TargetPath": "mediafields/phoenix2.jpg"
-            },
-            {
-              "SourcePath": "mediafields/phoenixA.png",
-              "TargetPath": "mediafields/phoenixA.png"
-            },
-            {
-              "SourcePath": "mediafields/reyna.jpg",
-              "TargetPath": "mediafields/reyna.jpg"
-            },
-            {
-              "SourcePath": "mediafields/Reyna_C.mp4",
-              "TargetPath": "mediafields/Reyna_C.mp4"
-            },
-            {
-              "SourcePath": "mediafields/Reyna_E.mp4",
-              "TargetPath": "mediafields/Reyna_E.mp4"
-            },
-            {
-              "SourcePath": "mediafields/Reyna_Q.mp4",
-              "TargetPath": "mediafields/Reyna_Q.mp4"
-            },
-            {
-              "SourcePath": "mediafields/Reyna_X.mp4",
-              "TargetPath": "mediafields/Reyna_X.mp4"
-            },
-            {
-              "SourcePath": "mediafields/reynaA.png",
-              "TargetPath": "mediafields/reynaA.png"
-            },
-            {
-              "SourcePath": "mediafields/sage.jpg",
-              "TargetPath": "mediafields/sage.jpg"
-            },
-            {
-              "SourcePath": "mediafields/Sage_C.mp4",
-              "TargetPath": "mediafields/Sage_C.mp4"
-            },
-            {
-              "SourcePath": "mediafields/Sage_E.mp4",
-              "TargetPath": "mediafields/Sage_E.mp4"
-            },
-            {
-              "SourcePath": "mediafields/Sage_Q.mp4",
-              "TargetPath": "mediafields/Sage_Q.mp4"
-            },
-            {
-              "SourcePath": "mediafields/Sage_X.mp4",
-              "TargetPath": "mediafields/Sage_X.mp4"
-            },
-            {
-              "SourcePath": "mediafields/sageA.png",
-              "TargetPath": "mediafields/sageA.png"
-            }
-          ]
         }
       ]
     }
   ]
 }
-

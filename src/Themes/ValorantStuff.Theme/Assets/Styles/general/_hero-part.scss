@@ -1,0 +1,77 @@
+@import "../abstracts/mixins";
+
+.heroPart__container {
+    @include margin-left-gutter($multiplier: -1);
+    @include margin-right-gutter($multiplier: -1);
+
+    @include media-breakpoint-up(xxl) {
+        margin-left: calc(-1 * var(--page-margin-xx-large));
+        margin-right: calc(-1 * var(--page-margin-xx-large));
+    }
+
+    &.black {
+        background-color: var(--color-black);
+        color: var(--color-white);
+    }
+
+    &.gray {
+        background-color: var(--color-gray);
+        color: var(--color-white);
+    }
+
+    &.white {
+        background-color: var(--color-white);
+        color: var(--color-black);
+    }
+
+    text-align: center;
+}
+
+.heroPart {
+    padding: 4rem var(--gutter-xx-large) 4rem var(--gutter-xx-large);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media-breakpoint-up(xl) {
+        padding: 4.5rem;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        padding-left: var(--page-margin-xx-large);
+        padding-right: var(--page-margin-xx-large);
+    }
+
+    &__title {
+        font-weight: 600;
+        max-width: 440px;
+        padding-bottom: 3rem;
+
+        @include media-breakpoint-up(xl) {
+            max-width: 500px;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            max-width: 700px;
+        }
+    }
+
+    &__body {
+        max-width: 550px;
+        font-size: 16px;
+
+        @include media-breakpoint-up(md) {
+            max-width: 700px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            max-width: 550px;
+            font-size: 18px;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            max-width: 650px;
+            font-size: 18px;
+        }
+    }
+}

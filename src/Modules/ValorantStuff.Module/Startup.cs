@@ -1,3 +1,4 @@
+using ValorantStuff.Handlers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,7 +14,9 @@ namespace ValorantStuff.Module
         public override void ConfigureServices(IServiceCollection services)
         {
             services.AddContentPart<HeroPart>()
-                .WithMigration<HeroPartMigration>();
+                .WithMigration<HeroPartMigration>()
+                .AddHandler<HeroPartTitleHandler>()
+                .UseDetailOnlyDriver();
 
             services.AddContentPart<ExpandableWidget>()
                 .WithMigration<ExpandableWidgetMigration>();
@@ -24,12 +27,7 @@ namespace ValorantStuff.Module
 
         public override void Configure(IApplicationBuilder builder, IEndpointRouteBuilder routes, IServiceProvider serviceProvider)
         {
-            //routes.MapAreaControllerRoute(
-            //    name: "Home",
-            //    areaName: "ValorantStuff.Module",
-            //    pattern: "Home/Index",
-            //    defaults: new { controller = "Home", action = "Index" }
-            //);
+            // Nothing to do here
         }
     }
 }

@@ -2,6 +2,7 @@ using OrchardCore.ContentFields.Fields;
 using OrchardCore.ContentManagement.Metadata;
 using OrchardCore.ContentManagement.Metadata.Settings;
 using OrchardCore.Data.Migration;
+using OrchardCore.Media.Fields;
 using static ValorantStuff.Constants.ContentTypes;
 using static ValorantStuff.Constants.MigrationSettings;
 
@@ -21,17 +22,21 @@ public class ExpandableWidgetMigration : DataMigration
                 .OfType(nameof(TextField))
                 .WithDisplayName("Title")
                 .WithPosition("0"))
-            .WithField("Text", field => field
-                .OfType(nameof(HtmlField))
-                .WithDisplayName("Text")
-                .WithPosition("2")
-                .WithEditor("Trumbowyg"))
             .WithField("Color", field => field
                 .OfType(nameof(TextField))
                 .WithDisplayName("Color of accordion")
                 .WithPosition("1")
                 .WithEditor("PredefinedList")
                 .WithSettings(PredefinedColorListSettings))
+            .WithField("Text", field => field
+                .OfType(nameof(HtmlField))
+                .WithDisplayName("Text")
+                .WithPosition("2")
+                .WithEditor("Trumbowyg"))
+            .WithField("AgentImage", field => field
+                .OfType(nameof(MediaField))
+                .WithDisplayName("Agent Image")
+                .WithPosition("3"))
         );
 
         _contentDefinitionManager.AlterTypeDefinition(ExpandableWidget, type => type

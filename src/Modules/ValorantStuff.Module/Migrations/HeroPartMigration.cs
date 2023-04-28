@@ -1,12 +1,10 @@
 using ValorantStuff.Models;
-using OrchardCore.ContentFields.Fields;
 using OrchardCore.ContentManagement.Metadata;
 using OrchardCore.ContentManagement.Metadata.Settings;
 using OrchardCore.Data.Migration;
-using OrchardCore.Markdown.Fields;
 using OrchardCore.Title.Models;
-using static ValorantStuff.Constants.ContentTypes;
 using static ValorantStuff.Constants.MigrationSettings;
+using static Lombiq.HelpfulExtensions.Extensions.ContentTypes.ContentTypes;
 
 namespace ValorantStuff.Migrations;
 
@@ -19,23 +17,20 @@ public class HeroPartMigration : DataMigration
 
     public int Create()
     {
-        _contentDefinitionManager.AlterPartDefinition("HeroPart", part => part
-            .WithField("Title", field => field
-                .OfType(nameof(TextField))
+        _contentDefinitionManager.AlterPartDefinition<HeroPart>(part => part
+            .WithField(part => part.Title, field => field
                 .WithDisplayName("Title")
                 .WithPosition("0"))
-            .WithField("ColorList", field => field
-                .OfType(nameof(TextField))
+            .WithField(part => part.ColorList, field => field
                 .WithDisplayName("Background Color List")
                 .WithPosition("1")
                 .WithEditor("PredefinedList")
                 .WithSettings(PredefinedColorListSettings))
-            .WithField("Body", field => field
-                .OfType(nameof(MarkdownField))
+            .WithField(part => part.Body, field => field
                 .WithDisplayName("Body")
                 .WithPosition("2")
                 .WithEditor("Wysiwyg"))
-        );
+                );
 
         _contentDefinitionManager.AlterTypeDefinition(Page, type => type
             .RemovePart(nameof(TitlePart))

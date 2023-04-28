@@ -1,0 +1,9 @@
+// -----------------------------------------------------------------------------
+// Application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// Override breakpoints
+$grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px );
+
+// Initialize variable used by some of the gutter mixins
+$default-vertical-multiplier: 1;

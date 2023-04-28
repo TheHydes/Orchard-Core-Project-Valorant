@@ -71,7 +71,8 @@
         "Lombiq.HelpfulExtensions.ShapeTracing",
         "Lombiq.HelpfulExtensions.Widgets",
         "Lombiq.HelpfulExtensions.SiteTexts",
-        "ValorantStuff"
+        "Lombiq.BaseTheme",
+        "ValorantStuff.Module"
       ]
     },
     {
@@ -82,6 +83,15 @@
           "en-US"
         ]
       }
+    },
+    {
+      "name": "recipes",
+      "Values": [
+        {
+          "executionid": "ValorantStuff.Web",
+          "name": "Lombiq.BaseTheme.LayersAndZones"
+        }
+      ]
     }
   ]
 }

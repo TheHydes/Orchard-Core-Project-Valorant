@@ -5,15 +5,16 @@
 .valorantStuffMainMenu {
     position: relative;
     gap: 10px;
-    background-color: var(--color-background-body);
+    background-color: white;
     height: auto;
     box-shadow: 0 8px 32px rgba(0 0 0 / 0.1);
 
     &.layoutElement {
         padding: 24px 0;
+        background: radial-gradient(black, transparent);
 
-        @media(min-width: 992px) {
-            padding: 24px 32px;
+        @include media-breakpoint-up(lg) {
+            padding: 58px 32px;
         }
     }
     // This container is rendered by default, it's empty but not used, so we can hide it.
@@ -21,40 +22,35 @@
         display: none;
     }
 
-    @media(min-width: 992px) {
-        height: 72px;
+    @include media-breakpoint-up(lg) {
+        height: 70px;
     }
 
-    @media(min-width: 1400px) {
-        height: 76px;
+    @include media-breakpoint-up(xxl) {
+        height: 80px;
     }
 
     &__container {
         display: flex;
         align-items: flex-start;
 
-        @media(min-width: 992px) {
+        @include media-breakpoint-up(lg) {
             max-width: 100%;
             padding-right: 0;
             padding-left: 0;
         }
         // We don't want to change the original behaviour above lg, so it's simpler to use "media-breakpoint-down".
-        @media(min-width: 992px) {
+        @include media-breakpoint-down(lg) {
             max-width: unset;
             padding-right: 0;
             padding-left: 0;
         }
 
         &__logo {
-            padding-left: 32px;
-
-            @media(min-width: 992px) {
-                padding-left: 0;
-            }
-
-            @media (min-width: 1400px) {
-                content: url("../images/valorant-stuff-logo.png");
-            }
+            padding: 0.4rem;
+            margin-left: 1rem;
+            width: 7rem;
+            height: 5rem;
         }
 
         .navbar-collapse {
@@ -78,8 +74,6 @@
         .collapse {
             &.show {
                 background-image: url("../images/main-menu-close-icon.svg");
-                width: 20px;
-                height: 20px;
             }
 
             &:not(.show) {
@@ -101,52 +95,32 @@
             margin-bottom: 8px;
             height: 56px;
 
-            @media(min-width: 992px) {
+            @include media-breakpoint-up(lg) {
                 padding: 0 10px;
             }
 
-            @media (min-width: 1200px) {
+            @include media-breakpoint-up(xl) {
                 padding: 0 20px;
             }
 
             a {
-                font-family: var(--font-museo);
-                font-weight: 400;
+                font-family: var(--font-title);
                 font-size: 20px;
-                color: var(--color-lombiq-black);
+                padding: 0.8rem;
+                color: var(--color-darkred);
+                border-radius: 22px;
+                font-style: italic;
+                background: radial-gradient(lightgray, transparent);
                 text-decoration: none;
 
                 &:hover {
                     color: var(--color-black);
                 }
 
-                @media(min-width: 992px) {
-                    font-size: 16px;
-                }
-            }
-        }
-        // In this situation we can't fix the warning, since if we switch up the two selectors it will still throw the
-        // warning.
-        /* stylelint-disable no-descending-specificity */
-        & > .currentPage {
-            background-color: var(--color-lombiq-green);
-
-            @media(min-width: 992px) {
-                background-color: transparent;
-            }
-
-            a {
-                font-weight: 600;
-                color: var(--color-active-menu-link);
-
-                &:hover {
-                    color: var(--color-black);
-                }
-
-                @media(min-width: 992px) {
-                    color: var(--color-lombiq-black);
-                    text-decoration: underline;
-                    text-underline-position: under;
+                @include media-breakpoint-up(lg) {
+                    font-size: 22px;
+                    padding: 1rem;
+                    border-radius: 30px;
                 }
             }
         }

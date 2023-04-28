@@ -5,5 +5,6 @@ using OrchardCore.DisplayManagement.Manifest;
     Author = "The Orchard Core Team",
     Website = "https://orchardcore.net",
     Version = "0.0.1",
-    Description = "ValorantStuff.Theme"
+    Description = "ValorantStuff.Theme",
+    BaseTheme = Lombiq.BaseTheme.Constants.FeatureIds.BaseTheme
 )]

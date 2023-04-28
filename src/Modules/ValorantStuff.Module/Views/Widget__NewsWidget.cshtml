@@ -2,12 +2,15 @@
 @using Microsoft.AspNetCore.Html;
 @using OrchardCore.ContentFields.Settings;
 @using OrchardCore.ContentManagement;
-@*@using OrchardCore.Flows.Models;*@
+@using OrchardCore.Media;
+
+@inject IMediaFileStore mediaFileStore
 
 @{
     var contentItem = (ContentItem)Model.ContentItem;
     var widget = contentItem.As<NewsWidget>();
-    var widgetImage = widget.Image;
+    var imageUrl = widget.Image.Paths?.FirstOrDefault() is { } path ? mediaFileStore.MapPathToPublicUrl(path) : null;
+    var imageAlt = widget.Image.MediaTexts?.FirstOrDefault();
     var widgetTitle = widget.Title.Text;
 
     var widgetText = HtmlString.Empty;
@@ -20,7 +23,7 @@
 }
 
 <div class="NewsWidget">
-    <img class="NewsWidhet__image" @widgetImage/>
+    <img class="NewsWidget__image" src="@imageUrl" alt="@imageAlt" />
     <h1 class="NewsWidget__title">@widgetTitle</h1>
     <div class="NewsWidget__text">@widgetText</div>
 </div>

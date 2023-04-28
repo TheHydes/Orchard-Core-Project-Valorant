@@ -1,0 +1,106 @@
+@import "../../abstracts/mixins";
+
+@mixin common-button-properties {
+    color: var(--color-font);
+    display: flex;
+    flex-direction: row;
+    padding: 12px 24px;
+    background: var(--color-white);
+    border-radius: 180px;
+    align-items: center;
+    border: 0;
+    font-weight: 500;
+    cursor: pointer;
+    height: 44px;
+
+    &:hover {
+        box-shadow: 0 21px 34px rgba(0 0 0 / 0.2);
+        background: var(--color-white);
+        color: var(--color-font);
+    }
+}
+
+@mixin button-basic {
+    @include common-button-properties;
+
+    box-shadow: var(--button-shadow);
+}
+
+@mixin button-contact {
+    @include common-button-properties;
+
+    box-shadow: 0 9px 14px rgba(0 0 0 / 0.05);
+}
+
+@mixin arrow-link {
+    // Required to override application wide styles.
+    // stylelint-disable declaration-no-important
+    font-family: var(--font-primary) !important;
+    // stylelint-enable declaration-no-important
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+
+    @include media-breakpoint-up(xl) {
+        font-size: 2em;
+        line-height: 39px;
+    }
+}
+
+@mixin arrow-link-image {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    transition: transform 0.4s ease;
+    background-image: url("/ValorantStuff.Theme/images/valorant-stuff-icon-white.svg");
+    height: 23px;
+    width: 25px;
+}
+
+@mixin arrow-link-container {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 2em;
+
+    a {
+        color: var(--color-white);
+
+        &:hover {
+            color: var(--color-white);
+        }
+    }
+}
+
+@mixin arrow-link-animation {
+    transform: translateX(20px);
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@mixin toggle-button {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    padding: 0.333em 1em;
+    border: 1px solid var(--color-black);
+    filter: drop-shadow(0 4px 12px rgb(0 0 0 / 0.1));
+    border-radius: 50px;
+    color: var(--color-black);
+    background: var(--color-white);
+    cursor: pointer;
+
+    @include media-breakpoint-up(xl) {
+        font-size: 20px;
+        line-height: 24px;
+        padding: 0.5em 1em;
+    }
+}
+
+@mixin toggle-button-active {
+    color: var(--color-white);
+    border-color: var(--color-black);
+    background: var(--color-black);
+}

@@ -2,51 +2,42 @@
 @import "../abstracts/native-variables";
 @import "../abstracts/mixins";
 
-.Black {
-    background-color: black;
-    border-color: darkred;
-}
-
 .Gray {
-    background-color: gray;
-    border-color: darkred;
+    background: linear-gradient(330deg, gray, transparent);
 }
 
 .White {
-    background-color: white;
-    border-color: darkred ;
+    background: linear-gradient(330deg, white, transparent);
+}
+
+.Black {
+    background: linear-gradient(330deg, black, transparent);
 }
 
 .ExpandableWidget {
-    /*&__container {*/
-        /*        @include margin-left-gutter($multiplier: -1);
-        @include margin-right-gutter($multiplier: -1);*/
-
-        /*@media (min-width: 1200px) {
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }*/
+    &:nth-child(1) {
+        margin-top: 2rem;
+    }
 
     &__title {
-        color: darkred;
+        color: var(--color-darkred);
         padding: 2rem;
         display: flex;
         justify-content: space-between;
-        border-style: solid;
+        border-style: none;
         width: 100%;
-        transition: opacity 0.2s ease;
+        transition: opacity 0.33s ease;
     }
 
     &__titleText {
         width: 80%;
         font-size: 24px;
-        font-weight: 600;
+        font-weight: 400;
         text-align: left;
-        font-family: fantasy;
+        font-family: var(--font-title);
     }
-/*
-    &__textAndFoot {
+
+    &__textAndImage {
         background: var(--color-white);
         display: block;
         max-height: 0;
@@ -54,41 +45,38 @@
         opacity: 0;
         transition: padding 0.3s ease-in, max-height 0.3s ease, visibility 0.2s ease-in, opacity 0.1s ease-in;
 
-        @media (min-width: 1200px) {
+        @include media-breakpoint-up(xs) {
             display: flex;
         }
-    }*/
+    }
 
     &__text {
-        background: var(--color-white);
-        display: block;
-        max-height: 0;
-        visibility: hidden;
-        opacity: 0;
-        transition: padding 0.3s ease-in, max-height 0.3s ease, visibility 0.2s ease-in, opacity 0.1s ease-in;
-        padding-bottom: 4rem;
+        padding-bottom: 2.5rem;
 
-        @media (min-width: 1200px) {
-            display: flex;
-        }
-        /*        @media (min-width: 1200px) {
+        @include media-breakpoint-up(xl) {
             width: 50%;
             padding-bottom: unset;
-        }*/
+            padding-top: 8rem;
+        }
+
+        .ImageButton:hover {
+            opacity: 0.8;
+        }
     }
 
-/*    &__foot {
-        @media (min-width: 1200px) {
+    &__image {
+        height: 400px;
+
+        @include media-breakpoint-up(xl) {
             padding-left: 15%;
         }
-    }*/
+    }
 
     &__arrow {
-        background-image: url("/ValorantStuff.Theme/images/valorant-stuff-arrow-down-icon.svg");
-        color: darkred;
-        width: 16px;
-        height: 18px;
-        transition: transform 0.2s ease;
+        background-image: url("/ValorantStuff.Theme/images/valorant-arrow-down2.svg");
+        width: 30px;
+        height: 30px;
+        transition: transform 0.33s ease;
     }
 
     .open &__title {
@@ -99,15 +87,15 @@
         transform: rotate(180deg);
     }
 
-    .open &__text {
+    .open &__textAndImage {
         display: block;
         max-height: 1200px;
         padding: 2rem 2rem 4rem;
         visibility: visible;
         opacity: 1;
-        transition: opacity 0.3s ease, max-height 0.3s ease, padding 0.01s ease;
+        transition: opacity 0.45s ease, max-height 0.45s ease, padding 0.001s ease;
 
-        @media (min-width: 1200px) {
+        @include media-breakpoint-up(xl) {
             display: flex;
         }
     }

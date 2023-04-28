@@ -8,5 +8,8 @@ public static class ResourceNames
 
     public const string MainMenu = Prefix + nameof(MainMenu);
     public const string Home = Prefix + nameof(Home);
+    public const string Agents = Prefix + nameof(Agents);
+    public const string Agent = Prefix + nameof(Agent);
+    public const string News = Prefix + nameof(News);
     public const string ExpandableWidget = Prefix + nameof(ExpandableWidget);
 }

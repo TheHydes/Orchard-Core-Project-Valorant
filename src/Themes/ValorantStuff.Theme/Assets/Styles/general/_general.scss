@@ -1,0 +1,79 @@
+// --------------------------------------------------------------------------------------------------------------------
+// General layout rules
+// --------------------------------------------------------------------------------------------------------------------
+
+@import "../abstracts/mixins";
+@import "../components/mixins/button";
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--color-light-black);
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 170%;
+    color: var(--color-darkred);
+}
+
+.layoutElement_leaf {
+    h1 {
+        font-size: 32px;
+        font-family: var(--font-title);
+        font-style: normal;
+        font-weight: 500;
+
+        @include media-breakpoint-up(sm) {
+            font-size: 40px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            font-size: 48px;
+            line-height: normal;
+        }
+    }
+
+    h2 {
+        font-size: 24px;
+        font-family: var(--font-primary);
+        font-style: normal;
+        font-weight: 500;
+
+        @include media-breakpoint-up(xl) {
+            font-size: 32px;
+            line-height: normal;
+        }
+    }
+
+    h3 {
+        font-size: 20px;
+        font-family: var(--font-primary);
+        font-style: normal;
+        font-weight: 500;
+    }
+
+    a {
+        font-family: var(--font-primary);
+        color: var(--color-darkred);
+
+        &:active {
+            font-weight: 700;
+        }
+
+        &:hover {
+            color: red;
+        }
+    }
+}
+
+#content {
+    flex-grow: 1;
+}
+
+.widget-container-title h2 {
+    font-weight: 700;
+    font-size: 32px;
+
+    @include margin-gutter;
+}

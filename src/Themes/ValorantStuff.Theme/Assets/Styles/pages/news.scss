@@ -1,0 +1,62 @@
+@import "../abstracts/native-variables";
+@import "../abstracts/mixins";
+
+.Black {
+    background-color: var(--color-black);
+    color: var(--color-darkred);
+}
+
+.Gray {
+    background-color: var(--color-gray);
+    color: var(--color-darkred);
+}
+
+.White {
+    background-color: var(--color-white);
+    color: var(--color-darkred);
+}
+
+.NewsWidget {
+    align-content: center;
+    text-align: center;
+
+    &__image {
+        margin: 1rem;
+        width: 84%;
+    }
+
+    &__title {
+        @include margin-bottom-gutter;
+    }
+
+    &__text {
+        font-size: 20px;
+        font-family: var(--font-primary);
+        font-weight: 600;
+
+        .yt {
+            width: 84%;
+            height: 300px;
+
+            @include media-breakpoint-up(xs) {
+                height: 500px;
+            }
+
+            @include media-breakpoint-up(md) {
+                height: 800px;
+            }
+
+            @include media-breakpoint-up(xl) {
+                height: 1000px;
+            }
+
+            @include media-breakpoint-up(xxl) {
+                height: 800px;
+            }
+
+            @media (min-width: 1900px) {
+                height: 1000px;
+            }
+        }
+    }
+}

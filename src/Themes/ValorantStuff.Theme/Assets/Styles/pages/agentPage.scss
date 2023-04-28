@@ -1,0 +1,67 @@
+﻿@import "../abstracts/native-variables";
+@import "../abstracts/mixins";
+
+.AgentContainer {
+    .banner {
+        width: 100%;
+        height: 100%;
+
+        @include padding-bottom-gutter;
+        @include padding-top-gutter;
+    }
+
+    .title {
+        @include padding-bottom-gutter;
+    }
+
+    .videos {
+        display: flex;
+        flex-wrap: wrap;
+
+        .videoA {
+            padding-bottom: 0.5rem;
+            width: 100%;
+
+            @include media-breakpoint-up(md) {
+                width: 50%;
+
+                &:nth-child(even) {
+                    padding-left: 0.5rem;
+                }
+            }
+        }
+    }
+
+    .ability {
+        font-size: 20px;
+        font-family: var(--font-primary);
+        font-weight: 600;
+    }
+
+    .yt {
+        width: 100%;
+        height: 300px;
+
+        @include padding-bottom-gutter;
+
+        @include media-breakpoint-up(xs) {
+            height: 500px;
+        }
+
+        @include media-breakpoint-up(md) {
+            height: 800px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            height: 1000px;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            height: 800px;
+        }
+
+        @media (min-width: 1900px) {
+            height: 1000px;
+        }
+    }
+}
